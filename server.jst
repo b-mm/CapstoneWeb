@@ -1,0 +1,38 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const axios = require('axios');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Middleware
+app.use(express.json());
+
+// MongoDB Connection
+mongoose.connect('mongodb://localhost:27017/flighttracking', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const flightSchema = new mongoose.Schema({
+  flightId: String,
+  status: String,
+  location: String,
+  // Add other fields as necessary
+});
+
+const Flight = mongoose.model('Flight', flightSchema);
+
+// Sample Endpoint to fetch flight data
+app.get('/api/flights', async (req, res) => {
+  try {
+    const flights = await Flight.find();
+    res.json(flights);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
