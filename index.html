@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flight Tracking</h1>
+    <canvas id="flightChart"></canvas>
+
+    <script>
+        async function fetchFlights() {
+            const response = await fetch('http://localhost:5000/api/flights/realtime');
+            const data = await response.json();
+            // Process and display the flight data
+        }
+
+        fetchFlights();
+    </script>
+</body>
+</html>
