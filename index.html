@@ -20,7 +20,6 @@
                     <li><a href="#tutorials">Tutorials</a></li>
                     <li><a href="https://canvas.ku.edu/courses/140446/discussion_topics" target="_blank">Forums</a></li>
                     <li><a href="#tools">Tools</a></li>
-                    <li><a href="#register">Register/Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -30,7 +29,6 @@
         <div class="hero-content">
             <h1>Welcome to ThreatWatch</h1>
             <p>Your ultimate platform for cybersecurity awareness, hands-on practice, and educational resources.</p>
-            <a href="#learn-more" class="cta-button">Learn More</a>
         </div>
     </section>
 
@@ -38,8 +36,12 @@
         <div class="feature-item">
             <img src="assets/codingkid_resized.jpg" alt="Coding Kid">
             <h2>Hands-on Practice</h2>
-            <p>Test your skills using our Damn Vulnerable Web Application (DVWA) with real-world challenges.</p>
-            <p><a href="https://www.dvwa.co.uk/">Try DVWA</a></p>
+            <p>The Damn Vulnerable Web Application (DVWA) is a PHP/MySQL web application designed to help security
+                professionals and developers learn about web vulnerabilities. DVWA contains several categories of
+                real-world vulnerabilities like SQL injection, XSS, and CSRF. It offers different security levels to
+                practice exploiting and securing these issues. This makes it ideal for practicing penetration testing in
+                a safe environment.</p>
+            <p><a href="https://www.dvwa.co.uk/" class="cta-button">Try DVWA</a></p>
         </div>
         <div class="feature-item">
             <img src="assets/beenhacked_resized.jpg" alt="Been Hacked">
@@ -49,8 +51,11 @@
         <div class="feature-item">
             <img src="assets/lockandkey_resized.jpg" alt="Lock and Key">
             <h2>Best Security Practices</h2>
-            <p>Explore Cybrary courses for top-notch security training and certifications.</p>
-            <p><a href="https://www.cybrary.it/">Visit Cybrary</a></p>
+            <p>Cybrary is an online learning platform for cybersecurity and IT professionals. It offers free and paid
+                courses on various topics, such as ethical hacking, network security, and penetration testing. The
+                platform provides industry certifications, hands-on labs, and learning tracks designed to advance your
+                cybersecurity skills, whether you're a beginner or an experienced professional.</p>
+            <p><a href="https://www.cybrary.it/" class="cta-button">Visit Cybrary</a></p>
         </div>
     </section>
 
@@ -58,16 +63,63 @@
         <h2>Cybersecurity News</h2>
         <div class="news-feed">
             <article>
-                <h3>Latest Cybersecurity Breach Affects Millions</h3>
-                <p>Get the details on the most recent security breach and how to protect yourself.</p>
+                <h3>YouTube: Understanding Cybersecurity Vulnerabilities</h3>
+                <p>Let's explore common cybersecurity vulnerabilities and how they can be exploited. Learn how to
+                    identify and mitigate potential threats to stay secure.</p>
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/0hpAVM875PA"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen title="Cybersecurity Vulnerabilities"></iframe>
+                </div>
             </article>
-            <!-- Additional news articles can be dynamically loaded here -->
+            <article>
+                <h3>YouTube: Top Cybersecurity Trends to Watch</h3>
+                <p>This video highlights the top trends in cybersecurity, from AI-driven attacks to cloud security
+                    practices, helping you stay ahead of emerging threats.</p>
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/VK0GyUSDwQY"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen title="Top Cybersecurity Trends"></iframe>
+                </div>
+            </article>
+            <article>
+                <h3>YouTube: Insider Threats and Cybersecurity</h3>
+                <p>Insider threats are one of the biggest challenges in cybersecurity. Find out what insider
+                    threats are and how to protect against them.</p>
+                <div class="iframe-container">
+                    <iframe src="https://www.youtube.com/embed/_lZmsPDQju4"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen title="Insider Threats in Cybersecurity"></iframe>
+                </div>
+            </article>
         </div>
     </section>
 
     <section id="tutorials" class="tutorials-section">
         <h2>Interactive Tutorials</h2>
         <p>Learn how to recognize phishing attacks and secure your accounts with two-factor authentication.</p>
+
+        <h3>YouTube: Secure Coding Practices for Beginners</h3>
+        <p>This video tutorial provides an introduction to secure coding principles, including preventing common
+            vulnerabilities like SQL injection and cross-site scripting (XSS).</p>
+
+        <div class="iframe-container">
+            <iframe src="https://www.youtube.com/embed/aRbKFCY4tjE?start=91"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen title="Secure Coding Practices Video"></iframe>
+        </div>
+
+        <h3>Interactive Cybersecurity Lessons</h3>
+        <p>Explore interactive lessons on various cybersecurity topics designed to help students and educators
+            understand cybersecurity concepts in depth.</p>
+
+        <div class="tutorial-item">
+            <a href="https://www.ncyte.net/faculty/cybersecurity-curriculum/college-curriculum/interactive-lessons"
+                target="_blank" class="cta-button">
+                Interactive Cybersecurity Lessons
+            </a>
+
+        </div>
     </section>
 
     <section id="forums" class="forum-section">
@@ -117,7 +169,8 @@
                 to handle real-world cyber threats. SANS also provides essential resources such as the <strong>SANS
                     Analyst Report</strong>, which endorses Egnyte as a leading tool for securing cloud content. Their
                 worldwide events and free resources offer continuous opportunities for professionals to stay up-to-date
-                on the latest cybersecurity threats.</p>
+                on the latest cybersecurity threats.
+            </p>
             <p><a href="https://sansorg.egnyte.com/dl/p40sk7USUx" target="_blank" class="cta-button">Download SANS
                     Resources</a></p>
         </div>
@@ -133,6 +186,18 @@
             </ul>
         </div>
     </footer>
+    <a href="#home" class="back-to-top">↑</a>
+
+    <script>
+        window.onscroll = function () {
+            const topButton = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                document.body.classList.add('scrolled');
+            } else {
+                document.body.classList.remove('scrolled');
+            }
+        };
+    </script>
 </body>
 
 </html>
